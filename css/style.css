@@ -1,53 +1,23 @@
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    
-}
-.post {
-    cursor: pointer;
-    position: relative;
-    display: block;
-}
-.post-list {
+.container {
     display: grid;
-    grid-template-columns: repeat(3, minmax(100px, 293px));
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-gap: 5px;
     justify-content: center;
-    grid-gap: 28px ;
 }
-.post-image {
-    margin: 0;
+.item {
+    border-radius: 5px;
+    padding: 10px;
+    background: #f2f2f2;
 }
-.post-image img {
-    width: 100%;
-    vertical-align: top;
+.item img {
+    max-width: 100%;
 }
-.post-overlay {
-    background: 0,0,0, .4;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-
+.lv-1 {
+    grid-row-end:span 3 ;
 }
-.post:hover .post-overlay{
-    display: flex;
+.lv-2 {
+    grid-row-end: span 2;
 }
-.post-likes,
-.post-coments {
-    width: 80px;
-    margin: 5px;
-    font-weight: bold;
-    text-align: center;
-    display: inline-block;
-}
-.@media screen and (max-width: 768px) {
-    .post-list{
-        grip-gap: 3px 
-    }
+.lv-3 {
+    grid-row-end: span 1;
 }
